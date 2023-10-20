@@ -1,0 +1,73 @@
+/* Navigation Bar */
+.navbar {
+    font-family: Poppins;
+    font-size: 32;
+}
+
+
+/* Utilities */
+.tombol {
+    text-transform: uppercase;
+    border-radius: 32px;
+    background-color: rgb(241, 61, 61);
+    border-color: rgb(144, 21, 21);
+}
+
+.tombol:hover {
+    background-color: rgb(144, 21, 21);
+    border-color: rgb(144, 21, 21);
+}
+
+.image-container {
+    position: absolute;
+    z-index: 1;
+}
+
+.custom-image {
+    width: 110%;
+    height: auto;
+}
+
+.container {
+    z-index: 2;
+}
+
+/* Jumbotron */
+.jumbotron-fluid {
+    position: relative;
+    z-index: 3;
+    background-image: url(img/tips/umrah-kami.jpg);
+    background-size: 120%;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    height: 240px;
+    justify-content: center;
+}
+
+.display-4 {
+    font-weight: 900;
+    color: azure;
+    text-align:  center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+    .nav-link {
+        text-transform: uppercase;
+        margin-right: 32px;
+    }
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid rgb(241, 61, 61);
+        width: 50%;
+        margin: auto;
+        padding-bottom: 4px;
+        margin-bottom: -7px;
+    }
+}
