@@ -1,17 +1,19 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- My Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
     <!-- Link to CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleforcontact.css">
     <title>Welcome to Mina Wisata</title>
 
     <link rel="manifest" href="site.webmanifest">
@@ -21,11 +23,92 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
 
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+
+    <Title>
+        Hubungi Kami | Mina Wisata Islami
+    </Title>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Function to handle form submission and validation
+        function contactForm(event) {
+          event.preventDefault();
+      
+          // Define the validation rules and messages
+          var rules = {
+            name: {
+              required: true,
+              minlength: 2
+            },
+            subject: {
+              required: true,
+              minlength: 4
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            message: {
+              required: true,
+              minlength: 20
+            }
+          };
+      
+          var messages = {
+            name: {
+              required: "Please enter your name.",
+              minlength: "Name must be at least 2 characters."
+            },
+            subject: {
+              required: "Please enter a subject.",
+              minlength: "Subject must be at least 4 characters."
+            },
+            email: {
+              required: "Please enter your email address.",
+              email: "Please enter a valid email address."
+            },
+            message: {
+              required: "Please enter a message.",
+              minlength: "Message must be at least 20 characters."
+            }
+          };
+      
+          // Perform form validation using jQuery Validation Plugin
+          $("#contactForm").validate({
+            rules: rules,
+            messages: messages,
+            submitHandler: function (form) {
+              // If the form is valid, you can submit it or perform other actions here.
+              form.submit();
+            }
+          });
+        }
+      
+        // Attach the function to the form submit event
+        $(document).ready(function () {
+          $("#contactForm").submit(contactForm);
+        });
+      </script>
+      
 
   </head>
 
 <body>
+    <!-- HEADER -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -37,7 +120,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
             <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="paket.html">Pricing</a>
             <a class="nav-link" href="#">Gallery</a>
             <a class="nav-link" href="#">About</a>
             <a class="btn btn-primary tombol" href="contact.html">Contact Us</a>
@@ -46,6 +129,8 @@
       </div>
     </nav>
 
+    <!-- FORM VALIDATION -->
+    <section class="contact-section">
     <div class="row">
         <div class="col-12">
             <h2 class="contact-title">Hubungi Kami Melalui E-mail</h2>
@@ -79,7 +164,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-lg-3 offset-lg-1">
+        <div class="col-lg-3">
             <h4 class="widget_title">Informasi Kontak</h4>
             <div class="media contact-info">
                 <span class="contact-info__icon"><i class="ti-home"></i></span>
@@ -105,44 +190,9 @@
             </div>
         </div>
     </div>
-    <!-- ================ contact section end ================= -->
+    </section>
     
-        <!-- JS here -->
-        <script src="assets/js/animation.js"></script>
-        <!-- All JS Custom Plugins Link Here here -->
-        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-        <!-- Jquery, Popper, Bootstrap -->
-        <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
-        <!-- Jquery Mobile Menu -->
-        <script src="./assets/js/jquery.slicknav.min.js"></script>
     
-        <!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="./assets/js/owl.carousel.min.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
-        <!-- Date Picker -->
-        <script src="./assets/js/gijgo.min.js"></script>
-        <!-- One Page, Animated-HeadLin -->
-        <script src="./assets/js/wow.min.js"></script>
-        <script src="./assets/js/animated.headline.js"></script>
-        <script src="./assets/js/jquery.magnific-popup.js"></script>
-    
-        <!-- Scrollup, nice-select, sticky -->
-        <script src="./assets/js/jquery.scrollUp.min.js"></script>
-        <script src="./assets/js/jquery.nice-select.min.js"></script>
-        <script src="./assets/js/jquery.sticky.js"></script>
-    
-        <!-- contact js -->
-        <script src="./assets/js/contact.js"></script>
-        <script src="./assets/js/jquery.form.js"></script>
-        <script src="./assets/js/jquery.validate.min.js"></script>
-        <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-    
-        <!-- Jquery Plugins, main Jquery -->
-        <script src="./assets/js/plugins.js"></script>
-        <script src="./assets/js/main.js"></script>
     
     </body>
     
